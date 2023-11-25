@@ -1,0 +1,111 @@
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: #0F0F0F;
+    max-width: 576px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 1rem 0 0 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #5500ff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.header-login {
+    margin-top: 316.4095px;
+    background-color: #0F0F0F;
+}
+
+.bi-pencil-square::before {
+    font-size: 47px;
+    vertical-align: 0;
+}
+
+.logo {
+    color: #0E69AA;
+    background-color: #0F0F0F;
+    display: flex;
+    text-align: center;
+    height: 47px;
+    margin: 0 7rem;
+    font-size: 39px;
+}
+
+.logo > p {
+    line-height: 50px;
+}
+
+.logo > p:hover {
+    cursor: default;
+}
+
+.slogan {
+    color: white;
+    font-size: 26px;
+    margin: 0.5rem 0 0 7rem;
+}
+
+.slogan:hover {
+    cursor: default;
+}
+.slogan > p {
+    line-height: 1.75rem;
+}
+
+.btn-primary {
+    background-color: #0E69AA;
+    border-color: #0E69AA;
+}
+
+.main-login {
+    padding: 0 7rem;
+    background-color: #0F0F0F;
+}
+
+.main-login > form {
+    background-color: #0F0F0F;
+    padding-top: 1.25rem;
+}
+
+.main-login div {
+    padding-bottom: 1rem;
+}
+
+.userpass {
+    background-color: #3f3f3f;
+    border-color: #0E69AA;
+    border-radius: 7px;
+}
+
+.userpass:focus {
+    background-color: #3f3f3f;
+    color: lightgray;
+    border-color: #0E69AA;
+}
+
+.main-login button {
+    width: 100%;
+    border-radius: 7px;
+    padding: 0.5rem;
+}
+
+.footer-login {
+    background-color: #0F0F0F;
+    padding-top: 19rem;
+    text-align: center;
+    color: #5500ff;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "vicnotes",
+  "version": "0.1.0",
+  "description": "VicNotes is an application to write down whatever you want, so you don't forget it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Raphael Pedroso de Lima",
+  "license": "ISC",
+  "dependencies": {
+    "alertifyjs": "^1.13.1",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2",
+    "font-awesome": "^4.7.0"
+  }
+}
