@@ -2,6 +2,7 @@ html {
     font-family: 'Inter', sans-serif;
     background-color: #0F0F0F;
     max-width: 576px;
+    min-width: 476px;
     margin: 0 auto;
 }
 
@@ -26,12 +27,12 @@ a:hover {
 }
 
 .header-login {
-    margin-top: 316.4095px;
+    margin-top: 20.14rem;
     background-color: #0F0F0F;
 }
 
 .bi-pencil-square::before {
-    font-size: 47px;
+    font-size: 2.94rem;
     vertical-align: 0;
 }
 
@@ -40,13 +41,13 @@ a:hover {
     background-color: #0F0F0F;
     display: flex;
     text-align: center;
-    height: 47px;
+    height: 2.94rem;
     margin: 0 7rem;
-    font-size: 39px;
+    font-size: 2.44rem;
 }
 
 .logo > p {
-    line-height: 50px;
+    line-height: 3.13rem;
 }
 
 .logo > p:hover {
@@ -89,6 +90,7 @@ a:hover {
     background-color: #3f3f3f;
     border-color: #0E69AA;
     border-radius: 7px;
+    color: lightgray;
 }
 
 .userpass:focus {

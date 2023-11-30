@@ -1,0 +1,37 @@
+.footer-login {
+    padding-top: 0rem;
+    margin-top: 1rem;
+}
+
+.bi-lock {
+    font-size: 5rem;
+    display: block;
+    color: #007bff;
+    text-align: center;
+    border: 0.3rem solid #007bff;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 1rem;
+}
+
+.bi::before, [class*=" bi-"]::before, [class^=bi-]::before {
+    line-height: 5.5rem;
+}
+
+.main-login button {
+    padding: 0.35rem;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.main-login > form {
+    padding-top: 1rem;
+}
+
+main {
+    margin-top: 18.85rem;
+}
