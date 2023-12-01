@@ -1,0 +1,39 @@
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: #0F0F0F;
+    max-width: 576px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #0F0F0F;
+    text-align: center;
+    margin: 4rem auto 0;
+}
+
+body i {
+    line-height: 0;
+}
+
+p {
+    color: white;
+    margin-bottom: 0;
+    line-height: 0.77rem;
+    padding: 22.5px 2rem;
+    font-size: 26px;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.63rem;
+    height: 3.63rem;
+    background-color: #0E69AA;
+    border-radius: 4px;
+}
+
+.not-clicked-yet {
+    background-color: #0F0F0F;
+    border: 0.165rem solid #0E69AA;
+}
