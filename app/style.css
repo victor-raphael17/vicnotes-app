@@ -1,19 +1,24 @@
 html {
     font-family: 'Inter', sans-serif;
-    background-color: #0F0F0F;
+    background-color: #ffffff;
     margin: 0 auto;
+    background-color: #0F0F0F;
 }
 
 body {
-    max-height: 844px;
     background-color: #0F0F0F;
+    margin: 0 auto;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 500px;
+    min-width: 303px;
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     text-align: center;
-    margin: 1rem 0 0 0;
+    margin-top: 1rem;
 }
 
 p {
@@ -29,12 +34,16 @@ a:hover {
     color: #007bff;
 }
 
-footer {
-    margin-top: 14.5rem;
+main {
+    margin-top: 1rem;
+}
+
+main, header {
+    margin: 0 3rem;
 }
 
 .header-login {
-    margin-top: 16.49rem;
+    padding-bottom: 1rem;
     background-color: #0F0F0F;
 }
 
@@ -49,8 +58,8 @@ footer {
     display: flex;
     text-align: center;
     height: 2.94rem;
-    margin: 0;
     font-size: 2.44rem;
+    margin-bottom: 0.5rem;
 }
 
 .logo > p {
@@ -63,8 +72,7 @@ footer {
 
 .slogan {
     color: white;
-    font-size: 26px;
-    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
 }
 
 .slogan:hover {
@@ -72,16 +80,12 @@ footer {
 }
 .slogan > p {
     line-height: 1.75rem;
+    font-weight: 300;
 }
 
 .btn-primary {
     background-color: #0E69AA;
     border-color: #0E69AA;
-}
-
-.main-login > form {
-    background-color: #0F0F0F;
-    padding-top: 1.25rem;
 }
 
 .main-login div {
@@ -91,20 +95,24 @@ footer {
 .userpass {
     background-color: #3f3f3f;
     border-color: #0E69AA;
-    border-radius: 7px;
+    border-radius: 5px;
     color: lightgray;
+}
+
+.userpass:focus, .userpass:hover {
+    box-shadow: 0 0 10px #007bff;
 }
 
 .userpass:focus {
     background-color: #3f3f3f;
-    color: lightgray;
     border-color: #0E69AA;
+    color: white;
 }
 
 .main-login button {
     width: 100%;
     border-radius: 7px;
-    padding: 0.5rem;
+    padding: 0.45rem 0.05rem 0.3rem 0;
 }
 
 .footer-login {
@@ -112,3 +120,36 @@ footer {
     text-align: center;
     color: #5500ff;
 }
+
+.form-control {
+    height: 2.2rem;
+    padding: .5rem .75rem .375rem;
+}
+
+.userpass::placeholder {
+    color: #ADB5BD;
+}
+
+.bug {
+    padding: .6rem .75rem .375rem;
+}
+
+.footer-login {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0F0F0F;
+    text-align: center;
+    color: #5500ff;
+    padding: 1rem;
+    width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        padding: 0 0;
+    }
+
+    
+  }

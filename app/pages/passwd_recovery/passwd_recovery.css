@@ -1,18 +1,21 @@
 .footer-login {
-    padding-top: 0rem;
     margin-top: 1rem;
 }
 
 .bi-lock {
     font-size: 5rem;
     display: block;
-    color: #007bff;
+    color: #0E69AA;
     text-align: center;
-    border: 0.3rem solid #007bff;
+    border: 0.3rem solid #0E69AA;
     border-radius: 50%;
     width: 8rem;
     height: 8rem;
     margin: 0 auto 1rem;
+}
+
+.bi-lock :hover{
+    background-color: #007bff;
 }
 
 .bi::before, [class*=" bi-"]::before, [class^=bi-]::before {
@@ -20,7 +23,7 @@
 }
 
 .main-login button {
-    padding: 0.35rem;
+    padding: 0.45rem 0.35rem 0.35rem;
 }
 
 p {
@@ -30,8 +33,4 @@ p {
 
 .main-login > form {
     padding-top: 1rem;
-}
-
-main {
-    margin-top: 18.85rem;
 }

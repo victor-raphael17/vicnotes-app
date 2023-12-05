@@ -20,14 +20,14 @@
                 <i class="bi bi-pencil-square"></i><p>VicNotes</p>
             </div>
             <div class="slogan">
-                <p>Jot down what's</p>
-                <p>important!</p>
+                <p>The app that keeps</p>
+                <p>you on track!</p>
             </div>
         </header>
         <main class="main-login">
-            <form>
+            <form id="form-register">
                 <div>
-                    <input class="form-control form-control-color userpass" placeholder="Username">
+                    <input class="form-control form-control-color userpass" placeholder="Username" autofocus>
                 </div>
                 <div>
                     <input class="form-control form-control-color userpass" placeholder="Email">
@@ -38,7 +38,10 @@
                 <div>
                     <input class="form-control form-control-color userpass" type="password" placeholder="Confirm password">
                 </div>
-                <button type="button" onclick="location.href='../../index.html'" class="btn btn-primary">Register</button>
+                <div>
+                    <button type="button" onclick="location.href='../../index.html'" class="btn btn-primary">Register</button>
+                    <button id="clear-btn" type="button" class="btn btn-primary clear-button">Clear</button>
+                </div>
             </form>
             <h3>Already have an account? <a href="../../index.html">Login</a></h3>
         </main>

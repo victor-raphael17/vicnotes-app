@@ -1,3 +1,13 @@
 .header-login {
-    margin-top: 16.94rem;
+    padding-top: 13.78rem;
+}
+
+.main-login button {
+    width: 75%; /* Reduzi a largura para dar espaço ao botão Limpar */
+    display: inline-block;
+}
+
+.main-login .clear-button {
+    width: 24.6%; /* Reduzi a largura para dar espaço ao botão Limpar */
+    display: inline-block;
 }
