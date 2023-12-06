@@ -19,6 +19,7 @@ h3 {
     color: white;
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 p {
@@ -147,9 +148,15 @@ main, header {
 }
 
 @media only screen and (min-width: 992px) {
-    body {
-        padding: 0 0;
+    .slogan {
+        display: flex;
+        justify-content: center;
+        gap: 0.25em;
+        margin-bottom: 1rem;
     }
 
-    
-  }
+    .logo {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
