@@ -116,12 +116,6 @@ main, header {
     padding: 0.45rem 0.05rem 0.3rem 0;
 }
 
-.footer-login {
-    background-color: #0F0F0F;
-    text-align: center;
-    color: #5500ff;
-}
-
 .form-control {
     height: 2.2rem;
     padding: .5rem .75rem .375rem;
@@ -141,6 +135,7 @@ main, header {
     left: 0;
     right: 0;
     padding: 1rem 0 0.3rem;
+    text-align: center;
 }
 
 @media only screen and (min-width: 992px) {

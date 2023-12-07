@@ -16,6 +16,34 @@ body {
     font-size: 0.96rem;
 }
 
+footer {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 303px;
+}
+
+.bi-x-circle::before {
+    transform: rotate(45deg);
+    color: #0e69aa;
+}
+
+.endereco > p {
+    text-align: left;
+}
+
+.footer-home {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #5500ff;
+}
+
+.flexbox {
+    display: flex;
+}
+
 @media only screen and (min-width: 376px) {
     .slogan > p {
         font-size: 1.2rem;
@@ -39,8 +67,4 @@ body {
         justify-content: inherit;
         margin-bottom: 0.5rem;
     }
-}
-
-footer {
-    text-align: center;
 }
