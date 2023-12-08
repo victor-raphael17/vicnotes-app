@@ -1,0 +1,9 @@
+.main-login button {
+    width: 75%;
+    border-radius: 7px;
+    padding: 0.45rem 0.05rem 0.3rem 0;
+}
+
+.main-login .clear-btn {
+    width: 24%;
+}

@@ -8,6 +8,10 @@ p {
     text-align: center;
 }
 
+a {
+    color: red;
+}
+
 body {
     height: inherit;
 }
@@ -26,6 +30,7 @@ footer {
 .bi-x-circle::before {
     transform: rotate(45deg);
     color: #0e69aa;
+    font-size: 5rem;
 }
 
 .endereco > p {
@@ -38,10 +43,26 @@ footer {
     left: 0;
     right: 0;
     color: #5500ff;
+    margin-bottom: 1rem;
 }
 
 .flexbox {
     display: flex;
+    justify-content: space-between;
+    margin: 0 3rem 2rem;
+    align-items: end;
+}
+
+.flexbox p {
+    text-align: left;
+}
+
+.bi-pencil-fill::before {
+    margin-left: 0.2rem;
+}
+
+.cep > p {
+    color: #22bf72;
 }
 
 @media only screen and (min-width: 376px) {
