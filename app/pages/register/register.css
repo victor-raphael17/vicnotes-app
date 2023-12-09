@@ -7,3 +7,11 @@
 .main-login .clear-btn {
     width: 24%;
 }
+
+.username-error {
+    color: red;
+}
+
+.main-login .margin-bottom {
+    padding-bottom: 0;
+}

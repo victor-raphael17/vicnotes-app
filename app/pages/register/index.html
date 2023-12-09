@@ -34,7 +34,7 @@
                         class="form-control form-control-color userpass"
                         placeholder="Username"
                         autofocus required
-                        pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+"
+                        pattern="[A-Za-z0-9]+"
                         minlength="4"
                         maxlength="30"
                     >
@@ -80,7 +80,7 @@
                     >
                     <span class="username-error" id="conf-passwd-error"></span>
                 </div>
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between margin-bottom">
                     <button type="submit" class="btn btn-primary register-btn">Register</button>
                     <button type="button" id="clear-btn" class="btn btn-primary clear-btn">Clear</button>
                 </div>
