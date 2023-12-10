@@ -2,21 +2,7 @@ import { user } from "../../model/user.js";
 import { registerService } from "../../service/user.service.js";
 
 let main = function() {
-  document.addEventListener('DOMContentLoaded', function(){
-
-    let usersRegistered = localStorage.getItem("records");
-    let users = JSON.parse(usersRegistered);
-
-    const resultDiv = document.getElementById('result');
-
-    resultDiv.innerHTML = `
-      <p>Nome: ${users[(users.length - 1)].name}</p>
-      <p>Email: ${users[(users.length - 1)].email}</p>
-      <p>Senha: ${users[(users.length - 1)].password}</p>
-    `;
   
-    });
-
   document.getElementById('clear-btn').addEventListener('click', function(){
 
     let field = document.querySelectorAll('#form-register input');
@@ -30,10 +16,13 @@ main();
 
 function validateNameField() {
   const nameInput = document.getElementById('name-input'),
-    nameError = document.getElementById('name-error');
+    nameError = document.getElementById('name-error'),
+    paddingBottom = document.getElementById('padding-bottom');
 
   if (nameInput.validity.valueMissing) {
     nameError.textContent = '*This field is required.';
+
+    paddingBottom.style.paddingBottom = '0';
 
     nameError.style.display = 'block';
     
@@ -43,10 +32,14 @@ function validateNameField() {
   if (nameInput.validity.patternMismatch) {
     nameError.textContent = '*Enter a valid username.';
 
+    paddingBottom.style.paddingBottom = '0';
+
     nameError.style.display = 'block';
 
     return false;
   }
+
+  paddingBottom.style.paddingBottom = '1rem';
 
   nameError.style.display = 'none';
 
@@ -55,10 +48,13 @@ function validateNameField() {
 
 function validateEmailField() {
   const emailInput = document.getElementById('email-input'),
-    emailError = document.getElementById('email-error');
+    emailError = document.getElementById('email-error'),
+    paddingBottom = document.getElementById('padding-bottom2');
 
   if (emailInput.validity.valueMissing) {
     emailError.textContent = '*This field is required.';
+
+    paddingBottom.style.paddingBottom = '0';
 
     emailError.style.display = 'block';
     
@@ -68,10 +64,14 @@ function validateEmailField() {
   if (emailInput.validity.patternMismatch) {
     emailError.textContent = '*Enter a valid email.';
 
+    paddingBottom.style.paddingBottom = '0';
+
     emailError.style.display = 'block';
 
     return false;
   }
+
+  paddingBottom.style.paddingBottom = '1rem';
 
   emailError.style.display = 'none';
 
@@ -80,10 +80,13 @@ function validateEmailField() {
 
 function validatePasswordField() {
   const nameInput = document.getElementById('password-input'),
-    nameError = document.getElementById('password-error');
+    nameError = document.getElementById('password-error'),
+    paddingBottom = document.getElementById('padding-bottom3');
 
   if (nameInput.validity.valueMissing) {
     nameError.textContent = '*This field is required.';
+
+    paddingBottom.style.paddingBottom = '0';
 
     nameError.style.display = 'block';
 
@@ -93,10 +96,14 @@ function validatePasswordField() {
   if (nameInput.validity.patternMismatch) {
     nameError.textContent = '*The password must have at least 4 digits and a number.';
 
+    paddingBottom.style.paddingBottom = '0';
+
     nameError.style.display = 'block';
 
     return false;
   }
+
+  paddingBottom.style.paddingBottom = '1rem';
 
   nameError.style.display = 'none';
 
@@ -106,16 +113,21 @@ function validatePasswordField() {
 function passwordConfirmation(){
   const password = document.getElementById('password-input').value,
     confirmPassword = document.getElementById('confirm-password-input').value,
+    paddingBottom = document.getElementById('padding-bottom4'),
     nameError = document.getElementById('confirm-password-error');
   
   if (password !== confirmPassword){
     nameError.textContent = '*Passwords must to be the same.';
+
+    paddingBottom.style.paddingBottom = '0';
 
     nameError.style.display = 'block';
     
     return false;
 
   }
+
+  paddingBottom.style.paddingBottom = '1rem';
 
   nameError.style.display = 'none';
 

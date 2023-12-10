@@ -8,10 +8,6 @@
     width: 24%;
 }
 
-.username-error {
-    color: red;
-}
-
 .main-login .margin-bottom {
     padding-bottom: 0;
 }
@@ -23,4 +19,8 @@
 .register-btn:disabled:hover {
     opacity: 70%;
     cursor: pointer;
+}
+
+.username-error {
+    color: red;
 }
