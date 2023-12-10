@@ -4,19 +4,12 @@ import { registerService } from "../../service/user.service.js";
 let main = function() {
   document.addEventListener('DOMContentLoaded', function(){
 
-    $('#name-input').mask('AAAAAAAAAAAAAAAAAAAAAAAAAA', { translation: { 'A': { pattern: /[A-Za-z0-9]+/ } } });
-    $('#email-input').mask('A', { translation: { 'A': { pattern: /^[a-zA-Z0-9]+@[a-zA-Z0-9].+$/ } } });
-    $('#password-input').mask('A', { translation: { 'A': { pattern: /./ } } });
-    $('#confirm-password-input').mask('A', { translation: { 'A': { pattern: /./ } } });
-
     let usersRegistered = localStorage.getItem("records");
     let users = JSON.parse(usersRegistered);
 
-    const resultDiv = $('#result');
+    const resultDiv = document.getElementById('result');
 
-    resultDiv.hide();
-
-    resultDiv.html = `
+    resultDiv.innerHTML = `
       <p>Nome: ${users[(users.length - 1)].name}</p>
       <p>Email: ${users[(users.length - 1)].email}</p>
       <p>Senha: ${users[(users.length - 1)].password}</p>

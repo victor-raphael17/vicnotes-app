@@ -17,6 +17,7 @@ export class registerService {
 
     // Salvando os usuários atualizados no armazenamento local
     localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(register));
+    //JSON.stringfy transforma um objeto js em uma string JSON
 
     // Retornando os usuários atualizados
     return register;
