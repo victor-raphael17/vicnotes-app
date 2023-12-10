@@ -15,3 +15,12 @@
 .main-login .margin-bottom {
     padding-bottom: 0;
 }
+
+.register-btn:disabled {
+    opacity: 100%;
+}
+
+.register-btn:disabled:hover {
+    opacity: 70%;
+    cursor: pointer;
+}

@@ -1,12 +1,18 @@
 import { user } from '../../model/user.js';
+import { registerService } from '../../service/user.service.js';
 
 let main = function() {
 
-  document.getElementById('form-register').addEventListener('submit', function(event) {
+  document.addEventListener('DOMContentLoaded', function(){
 
-    event.preventDefault();
+    let usersRegistered = localStorage.getItem("records"),
+      user = JSON.parse(usersRegistered);
+  
+    const resultDiv = document.getElementById('result');
 
-  });
+    resultDiv.innerHTML = `<p>Nome: ${user[0].username}</p><p>Senha: ${user[0].password}</p>`;
+  
+    });
 
   document.getElementById('clear-btn').addEventListener('click', function(){
 
@@ -99,11 +105,11 @@ function validatePasswordField() {
 
 function passwordConfirmation(){
 
-  const passwd = document.getord-inputElementById('password').value,
+  const passwd = document.getElementById('password').value,
     confirmPasswd = document.getElementById('confirm-passwd').value,
-    confirmPasswdError = document.getElementById('confirm-password-error');
+    confirmPasswdError = document.getElementById('conf-passwd-error');
   
-  if(passwd != confirmPasswd){
+  if (passwd !== confirmPasswd){
     confirmPasswdError.textContent = 'Passwords must to be the same.';
 
     confirmPasswdError.style.display = 'block';
@@ -116,3 +122,63 @@ function passwordConfirmation(){
 
   return true;
 }
+
+function enableSubmitButtonOnFormChange() {
+
+  const submitButton = document.getElementById('submit-btn');
+
+  submitButton.disabled = true;
+
+}
+
+enableSubmitButtonOnFormChange();
+
+function onSubmit() {
+  
+  const userService = new registerService(),
+    username = document.getElementById('username').value,
+    email = document.getElementById('email').value,
+    password = document.getElementById('password').value;
+
+  let user1 = new user(username, email, password);
+  console.log(userService.saveLocal(user1));
+
+}
+
+document.querySelector('#username').addEventListener('input', function() {
+
+  validateNameField();
+
+});
+
+document.querySelector('#email').addEventListener('input', function() {
+
+  validateEmailField();
+
+});
+
+document.querySelector('#password').addEventListener('input', function () {
+
+  validatePasswordField();
+
+});
+
+document.querySelector('#confirm-passwd').addEventListener('input', function () {
+
+  passwordConfirmation();
+
+});
+
+document.querySelector('#form-register').addEventListener('change', function () {
+
+  const submitButton = document.getElementById('submit-btn');
+
+  if (validateNameField() && validateEmailField() && validatePasswordField() && passwordConfirmation()){
+    submitButton.disabled = false;
+
+  } else {
+    submitButton.disabled = true;
+
+  }
+
+});
