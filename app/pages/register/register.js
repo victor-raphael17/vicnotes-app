@@ -5,11 +5,17 @@ let main = function() {
   document.addEventListener('DOMContentLoaded', function(){
 
     let usersRegistered = localStorage.getItem("records");
-    let user = JSON.parse(usersRegistered);
-  
-    // Exibindo os dados na div com o ID 'result'
+    let users = JSON.parse(usersRegistered);
+
+    console.log(users);
+
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `<p>Nome: ${user[0].name}</p><p>Senha: ${user[0].password}</p>`;
+
+    resultDiv.innerHTML = `
+      <p>Nome: ${users[(users.length - 1)].name}</p>
+      <p>Email: ${users[(users.length - 1)].email}</p>
+      <p>Senha: ${users[(users.length - 1)].password}</p>
+    `;
   
     });
 
@@ -128,10 +134,11 @@ enableSubmitButtonOnFormChange();
 
 function onSubmit() {
   const userService = new registerService();
-  const name = document.getElementById('name-input').value;
-  const password = document.getElementById('password-input').value;
+  const name = document.getElementById('name-input').value,
+    email = document.getElementById('email-input').value,
+    password = document.getElementById('password-input').value;
 
-  let user1 = new user(name, password);
+  let user1 = new user(name, email, password);
 
   console.log(userService.saveLocal(user1));
 }
@@ -166,6 +173,10 @@ document.querySelector('#form-register').addEventListener('input', function () {
 
   if (validateNameField() && validateEmailField() && validatePasswordField() && passwordConfirmation()){
     submitButton.disabled = false;
+
+    submitButton.addEventListener('click', function () {
+      onSubmit();
+    });
 
   } else {
     submitButton.disabled = true;
