@@ -1,8 +1,8 @@
 # VicNotes-app
 
-Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em aplicativos de texto específicos para anotar informações e fazer to-do lists.
+Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em aplicativos de texto específicos para anotar informações importantes.
 
-O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
+O frontend da aplicação foi desenvolvido com HTML5, CSS3, Bootstrap 5.3.2, Javascript e Google Fonts, o backend ainda está em desonvolvimento.
 
 ## Endereço de Deploy - GitHub Pages
 
