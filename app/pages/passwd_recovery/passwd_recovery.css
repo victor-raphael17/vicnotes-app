@@ -1,3 +1,7 @@
+html {
+    min-width: 361px;
+}
+
 .footer-login {
     position: inherit;
     padding: 1rem 0 0;
