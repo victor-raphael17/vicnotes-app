@@ -1,24 +1,26 @@
 function adicionarBotao() {
   const novoBotao = document.createElement('button');
   novoBotao.classList.add('btn', 'btn-secondary', 'mb-3', 'note-icon-size');
-  novoBotao.textContent = 'Título';
-  novoBotao.addEventListener('click', abrirModal);
+  novoBotao.textContent = 'Note title';
+  novoBotao.addEventListener('click', openModal);
 
   const containerButtons = document.getElementById('containerButtons');
 
   if (containerButtons.children.length === 0 || containerButtons.lastChild.children.length >= 2) {
-      const novaLinha = document.createElement('div');
+    const newLine = document.createElement('div');
 
-      novaLinha.classList.add('d-flex', 'flex-row', 'justify-content-between');
+    newLine.classList.add('d-flex', 'flex-row', 'justify-content-between');
 
-      containerButtons.appendChild(novaLinha);
+    containerButtons.appendChild(newLine);
   }
 
   containerButtons.lastChild.appendChild(novoBotao);
+
+  $(novoBotao).hide().appendTo(containerButtons.lastChild).fadeIn('fast');
 }
 
   // Função para abrir o modal ao clicar no botão
-function abrirModal() {
+function openModal() {
   const modal = new bootstrap.Modal(document.getElementById('modalButton'));
 
   modal.show();
@@ -39,9 +41,8 @@ function removeButton(button) {
   }
 }
 
-
   // Adiciona um ouvinte de evento ao botão de adicionar
-document.getElementById('btnAdicionar').addEventListener('click', adicionarBotao);
+document.getElementById('btnAdd').addEventListener('click', adicionarBotao);
 
   // Adiciona um ouvinte de evento ao botão de salvar dentro do modal
 document.getElementById('btnSalvar').addEventListener('click', function () {
