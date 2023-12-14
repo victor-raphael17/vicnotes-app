@@ -1,8 +1,8 @@
-function adicionarBotao() {
-  const novoBotao = document.createElement('button');
-  novoBotao.classList.add('btn', 'btn-secondary', 'mb-3', 'note-icon-size');
-  novoBotao.textContent = 'Note title';
-  novoBotao.addEventListener('click', openModal);
+function addButton() {
+  const newButton = document.createElement('button');
+  newButton.classList.add('btn', 'btn-secondary', 'mb-3', 'note-icon-size');
+  newButton.textContent = 'Note title';
+  newButton.addEventListener('click', openModal);
 
   const containerButtons = document.getElementById('containerButtons');
 
@@ -14,9 +14,9 @@ function adicionarBotao() {
     containerButtons.appendChild(newLine);
   }
 
-  containerButtons.lastChild.appendChild(novoBotao);
+  containerButtons.lastChild.appendChild(newButton);
 
-  $(novoBotao).hide().appendTo(containerButtons.lastChild).fadeIn('400');
+  $(newButton).hide().appendTo(containerButtons.lastChild).fadeIn('400');
 }
 
   // Função para abrir o modal ao clicar no botão
@@ -42,28 +42,28 @@ function removeButton(button) {
 }
 
   // Adiciona um ouvinte de evento ao botão de adicionar
-document.getElementById('btnAdd').addEventListener('click', adicionarBotao);
+document.getElementById('btnAdd').addEventListener('click', addButton);
 
-document.getElementById('btnSalvar').addEventListener('click', function () {
+document.getElementById('saveBtn').addEventListener('click', function () {
 
-  const titulo = document.getElementById('tituloBotao').value;
+  const title = document.getElementById('buttonTitle').value;
 
-  const botoes = document.getElementById('containerButtons').getElementsByTagName('button'),
-    botaoAtual = botoes[botoes.length - 1];
+  const buttons = document.getElementById('containerButtons').getElementsByTagName('button'),
+    currentButton = buttons[buttons.length - 1];
 
-  botaoAtual.textContent = titulo;
+  currentButton.textContent = title;
 
     const modal = bootstrap.Modal.getInstance(document.getElementById('modalButton'));
     modal.hide();
 });
 
-document.getElementById('btnRemover').addEventListener('click', function () {
+document.getElementById('btnRemove').addEventListener('click', function () {
     const containerButtons = document.getElementById('containerButtons'),
-      botoes = containerButtons.getElementsByTagName('button');
+      buttons = containerButtons.getElementsByTagName('button');
 
-    if (botoes.length > 0) {
-        const lastBotao = botoes[botoes.length - 1];
-        removeButton(lastBotao);
+    if (buttons.length > 0) {
+        const lastButton = buttons[buttons.length - 1];
+        removeButton(lastButton);
     }
 
     const modal = bootstrap.Modal.getInstance(document.getElementById('modalButton'));
@@ -71,28 +71,24 @@ document.getElementById('btnRemover').addEventListener('click', function () {
 });
 
 $(document).ready(function() {
-  // Adicione um ouvinte de evento para o botão de envio
+  
+  $("#cep-input").mask("00000000");
+
   $("#submitButton").on("click", function(event) {
-      // Evite que o formulário seja enviado normalmente
       event.preventDefault();
 
-      // Obtenha o valor do CEP do input
       var cep = $("#cep-input").val();
 
-      // Construa a URL da API do ViaCEP com o CEP fornecido
       var url = "https://viacep.com.br/ws/" + cep + "/json/";
 
-      // Faça uma solicitação AJAX para a API do ViaCEP
       $.ajax({
           url: url,
           type: "GET",
           dataType: "json",
           success: function(data) {
-              // Atualize o conteúdo do elemento #cep-viacep com o nome da cidade
               $("#cep-viacep").text(data.localidade + ", " + data.uf);
           },
           error: function(error) {
-              // Trate os erros, se necessário
               console.log("Erro na solicitação ViaCEP:", error);
           }
       });

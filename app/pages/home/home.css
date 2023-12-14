@@ -131,6 +131,14 @@ button {
     color: white;
 }
 
+.width-larger {
+    width: 100%;
+}
+
+.height-taller {
+    height: 300px;
+}
+
 @media only screen and (min-width: 376px) {
     .slogan > p {
         font-size: 1.2rem;
