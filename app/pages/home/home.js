@@ -16,7 +16,7 @@ function adicionarBotao() {
 
   containerButtons.lastChild.appendChild(novoBotao);
 
-  $(novoBotao).hide().appendTo(containerButtons.lastChild).fadeIn('fast');
+  $(novoBotao).hide().appendTo(containerButtons.lastChild).fadeIn('400');
 }
 
   // Função para abrir o modal ao clicar no botão

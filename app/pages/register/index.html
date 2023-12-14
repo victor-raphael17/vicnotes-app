@@ -75,12 +75,17 @@
                     >
                     <span class="username-error" id="confirm-password-error"></span>
                 </div>
+                <select id="sagaFavorita" name="sagaFavorita">
+                    <option value="" disabled selected>Escolha uma saga dentre as duas:</option>
+                    <option value="starWars">Star Wars</option>
+                    <option value="avengers">Avengers (Marvel)</option>
+                </select>
                 <div class="d-flex justify-content-between margin-bottom">
                     <button type="submit" href="/index.html" id="submit-button" class="btn btn-primary register-btn">Register</button>
                     <button type="button" id="clear-btn" class="btn btn-primary clear-btn">Clear</button>
                 </div>
             </form>
-            <h3 class="h3-register">Already have an account? <a href="/index.html">Login</a></h3>
+            <h3 class="h3-register" id="margin-top-h3">Already have an account? <a href="/index.html">Login</a></h3>
             <div id="result" class="text-center text-white"></div>
         </main>
         <script type="module" src="/app/pages/register/register.js"></script>

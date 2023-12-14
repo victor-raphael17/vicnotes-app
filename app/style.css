@@ -19,7 +19,8 @@ h3 {
     color: white;
     text-align: center;
     margin-bottom: 0;
-    margin-top: 1rem;
+    margin-top: 0rem;
+    line-height: 1rem;
 }
 
 p {
@@ -133,8 +134,8 @@ main, header {
     text-align: center;
 }
 
-.main-login .text-danger {
-    padding: 0;
+#margin-top-h3 {
+    margin-top: 1rem;
 }
 
 @media only screen and (min-width: 992px) {

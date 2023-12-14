@@ -24,3 +24,7 @@
 .username-error {
     color: red;
 }
+
+#sagaFavorita {
+    margin-bottom: 1rem;
+}
