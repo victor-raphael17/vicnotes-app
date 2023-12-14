@@ -116,6 +116,21 @@ button {
     border: none;
 }
 
+.color-button-cep {
+    color: #5500ff;
+}
+
+.form-control {
+    color: white;
+    width: 6.6rem;
+    padding-right: 0;
+}
+
+.white-text-cep::placeholder,
+.white-text-cep:focus {
+    color: white;
+}
+
 @media only screen and (min-width: 376px) {
     .slogan > p {
         font-size: 1.2rem;

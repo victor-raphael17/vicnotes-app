@@ -55,12 +55,21 @@
         <footer class="footer-home">
             <div class="flexbox">
                 <div class="cep">
-                    <div class="d-flex">
-                        <p>CEP: XXXXX-XXX</p><i class="bi bi-pencil-fill"></i>
-                    </div>
-                    <p>YYYYYYYY, XXXXXX, ZZZZZZ</p>
+                    <form class="d-flex" id="form-cep">
+                      <input
+                          required
+                          type="number"
+                          pattern="^\d{1,8}$"
+                          required class="form-control border-primary mb-2 bg-black white-text-cep"
+                          id="cep-input"
+                          aria-label="cep"
+                          placeholder="00000-000"
+                        >
+                      <button id="submitButton" class="bi bi-pencil-fill color-button-cep"></button>
+                    </form>
+                    <p id="cep-viacep">YYYYYYYY, XXXXXX, ZZZZZZ</p>
                 </div>
-                  <button id="btnAdd" class="bi bi-x-circle"></button>
+                <button id="btnAdd" class="bi bi-x-circle"></button>
             </div>
             <a href="/index.html">SAIR</a>
         </footer>

@@ -35,7 +35,7 @@ https://www.figma.com/file/U0SfqCiai4qarNzDsWDQWl/Notes-%26-to-do-list?type=desi
 - [] ID 14 - Utiliza a biblioteca jQuery para manipular o DOM e aprimorar a interatividade das páginas web, implementando funcionalidades como eventos, animações e manipulação de elementos HTML de forma eficiente.
 - [] ID 15 - Seleciona e integra com sucesso um plugin jQuery, como o jQuery Mask Plugin ou outro plugin relevante para o projeto, a fim de melhorar a funcionalidade ou a aparência de elementos específicos em uma página web. 
 - RA5 - Efetuar requisições assíncronas para uma API fake e/ou APIs públicas, permitindo a obtenção e manipulação de dados dinamicamente.
-- [] ID 21 - Realiza requisições assíncronas para uma API fake e/ou APIs públicas, utilizando adequadamente conceitos como AJAX, Fetch API ou bibliotecas, para obter dados dinâmicos e realizar a manipulação e exibição dos resultados na página web.
+- [x] ID 21 - Realiza requisições assíncronas para uma API fake e/ou APIs públicas, utilizando adequadamente conceitos como AJAX, Fetch API ou bibliotecas, para obter dados dinâmicos e realizar a manipulação e exibição dos resultados na página web.
 
 ## Manual de execução
 - Clonar o repositório com `git clone`

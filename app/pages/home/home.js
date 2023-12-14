@@ -44,19 +44,15 @@ function removeButton(button) {
   // Adiciona um ouvinte de evento ao botão de adicionar
 document.getElementById('btnAdd').addEventListener('click', adicionarBotao);
 
-  // Adiciona um ouvinte de evento ao botão de salvar dentro do modal
 document.getElementById('btnSalvar').addEventListener('click', function () {
-    // Obtenha os valores do título e conteúdo do modal
-  const titulo = document.getElementById('tituloBotao').value,
-    conteudo = document.getElementById('conteudoBotao').value;
 
-    // Atualize o texto do botão atual
+  const titulo = document.getElementById('tituloBotao').value;
+
   const botoes = document.getElementById('containerButtons').getElementsByTagName('button'),
     botaoAtual = botoes[botoes.length - 1];
 
   botaoAtual.textContent = titulo;
 
-    // Feche o modal
     const modal = bootstrap.Modal.getInstance(document.getElementById('modalButton'));
     modal.hide();
 });
@@ -65,14 +61,40 @@ document.getElementById('btnRemover').addEventListener('click', function () {
     const containerButtons = document.getElementById('containerButtons'),
       botoes = containerButtons.getElementsByTagName('button');
 
-    // Remove the last button if there is any
     if (botoes.length > 0) {
         const lastBotao = botoes[botoes.length - 1];
         removeButton(lastBotao);
     }
 
-    // Close the modal
     const modal = bootstrap.Modal.getInstance(document.getElementById('modalButton'));
     modal.hide();
 });
 
+$(document).ready(function() {
+  // Adicione um ouvinte de evento para o botão de envio
+  $("#submitButton").on("click", function(event) {
+      // Evite que o formulário seja enviado normalmente
+      event.preventDefault();
+
+      // Obtenha o valor do CEP do input
+      var cep = $("#cep-input").val();
+
+      // Construa a URL da API do ViaCEP com o CEP fornecido
+      var url = "https://viacep.com.br/ws/" + cep + "/json/";
+
+      // Faça uma solicitação AJAX para a API do ViaCEP
+      $.ajax({
+          url: url,
+          type: "GET",
+          dataType: "json",
+          success: function(data) {
+              // Atualize o conteúdo do elemento #cep-viacep com o nome da cidade
+              $("#cep-viacep").text(data.localidade + ", " + data.uf);
+          },
+          error: function(error) {
+              // Trate os erros, se necessário
+              console.log("Erro na solicitação ViaCEP:", error);
+          }
+      });
+  });
+});
