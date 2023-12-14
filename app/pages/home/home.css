@@ -10,6 +10,8 @@ p {
 
 a {
     color: red;
+    text-decoration: none;
+    padding-bottom: 1rem;
 }
 
 body {
@@ -45,6 +47,7 @@ footer {
     left: 0;
     right: 0;
     color: #5500ff;
+    padding: 0.5rem 0 0.2rem;
 }
 
 .flexbox {
@@ -80,9 +83,45 @@ button {
     border: none;
 }
 
+.note-icon-size {
+    width: 32vw;
+    height: 120px;
+}
+
+.modal-content {
+    background-color: #0F0F0F;
+}
+.modal-content input,
+.modal-content textarea,
+.modal-content input:focus,
+.modal-content textarea:focus {
+    background-color: #3f3f3f;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.btn-close {
+    background-color: #0E69AA;
+}
+
+.userpass {
+    width: 100%;
+    height: 60%;
+}
+
+.modal-footer{
+    border: none;
+}
+
 @media only screen and (min-width: 376px) {
     .slogan > p {
         font-size: 1.2rem;
+    }
+    .note-icon-size {
+        width: 35vw;
     }
 }
 
@@ -90,9 +129,24 @@ button {
     .slogan > p {
         font-size: inherit;
     }
+    .note-icon-size {
+        width: 188px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
+    body {
+        margin: 0 2rem;
+        min-width: none;
+        max-width: none;
+    }
+
+    footer {
+        margin: 0 2rem;
+        max-width: none;
+        min-width: none;
+    }
+
     .slogan {
         display: inherit;
         justify-content: inherit;
@@ -100,7 +154,32 @@ button {
     }
 
     .logo {
-        justify-content: inherit;
-        margin-bottom: 0.5rem;
+        margin: 0;
+    }
+
+    .header-login {
+        margin: 0;
+        margin-top: 3rem;
+        display: flex;
+    }
+
+    .slogan > p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    .flexbox {
+        margin: 0;
+    }
+
+    main {
+        margin: 3rem auto;
+        min-width: 823px;
+        max-width: 823px;
+    }
+
+    .note-icon-size {
+        width: 400px;
     }
 }
