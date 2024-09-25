@@ -1,6 +1,6 @@
 # VicNotes-app
 
-O frontend da aplicação foi desenvolvido com HTML5, CSS3, Bootstrap 5.3.2, Javascript e Google Fonts. O backend ainda está em desonvolvimento...
+A aplicação está sendo desenvolvida em HTML, CSS, Bootstrap 5, JavaScript, jQuery. O desenvolvimento da aplicação não foi concluído ainda, portanto, não está 100% funcional.
 
 ## Protótipo
 
